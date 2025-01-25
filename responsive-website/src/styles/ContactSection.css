@@ -1,0 +1,60 @@
+/* src/styles/ContactSection.css */
+.contact-section {
+    background-image: linear-gradient(45deg, #f8f9fa 25%, transparent 25%),
+      linear-gradient(-45deg, #f8f9fa 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #f8f9fa 75%),
+      linear-gradient(-45deg, transparent 75%, #f8f9fa 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+  
+  .contact-icon-wrapper {
+    position: relative;
+  }
+  
+  .contact-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: #F47B2A;
+    opacity: 0.1;
+    border-radius: 50%;
+  }
+  
+  /* Card hover effects */
+  .bg-white {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bg-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form input styles */
+  input::placeholder,
+  textarea::placeholder {
+    color: #6B7280;
+  }
+  
+  input:focus,
+  textarea:focus {
+    background-color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-section {
+      background-size: 15px 15px;
+    }
+  }
+
+
+  

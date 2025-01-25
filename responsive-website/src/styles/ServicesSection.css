@@ -1,0 +1,61 @@
+/* Ensure consistent card height */
+.card {
+    height: 300px; /* Default height */
+    width: 100%; /* Full width of the grid column */
+    position: relative;
+    perspective: 1000px;
+     /* Enable 3D perspective */
+}
+
+/* Make card height responsive */
+@media (max-width: 768px) {
+    .card {
+        height: 250px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: 200px; /* Further adjust for very small screens */
+    }
+}
+
+/* Card inner container for flip effect */
+.card-inner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    
+}
+
+/* Flip the card on hover */
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.card-face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px; /* Match your design */
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: white;
+    border: 1px solid #191919;
+}
+
+.card-back {
+    background-color: #0A2357; /* Blue-900 */
+    color: white;
+    transform: rotateY(180deg);
+}
