@@ -39,7 +39,7 @@ const FeaturedCourses: React.FC = () => {
             variants={slideInVariants}
             custom={0}
           >
-            Vertexpace Courses
+            ScholarPath Courses
           </motion.h2>
           <motion.h3
             className="text-3xl md:text-4xl font-bold text-blue-900 mt-2"

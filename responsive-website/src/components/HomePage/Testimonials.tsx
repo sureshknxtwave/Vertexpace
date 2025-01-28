@@ -70,7 +70,7 @@ const Testimonials: React.FC = () => {
             Testimonials
           </span>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-900 mt-2 md:mt-3 leading-tight">
-            What Our Clients Say About Vertexpace
+            What Our Clients Say About ScholarPath
           </h2>
 
           {/* Bar line */}

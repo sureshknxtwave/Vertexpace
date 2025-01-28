@@ -53,7 +53,7 @@ const MainSection: React.FC = () => {
           transition={{ duration: 1, delay: 0.2 }}
         >
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-            Welcome To <span className="text-orange-500">Vertexpace!</span>
+            Welcome To <span className="text-orange-500">ScholarPath</span>
           </h1>
           <p className="text-base md:text-[16px] mb-8 leading-relaxed text-gray-200">
             "The function of education is to teach one to think intensively and to think critically. Intelligence and character – that is the goal of true education."

@@ -26,10 +26,10 @@ const Footer: React.FC = () => {
             <img 
               src={require("../../utils/logo.png")}
               alt="Logo" 
-              className="h-[100px] mb-6 mx-auto md:mx-0" 
+              className="h-[60px] w-[140px] mb-6 mx-auto md:mx-0" 
             />
             <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
-              Vertexpace is a leading education consultancy helping students achieve their academic and career goals.
+            ScholarPath is a leading education consultancy helping students achieve their academic and career goals.
             </p>
             <div className="bg-[#0A2357] py-3 font-bold hidden md:block">
               <div className="container mx-auto flex justify-between items-center px-4">
@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
               </p>
               <p className="flex items-center text-gray-300 justify-center md:justify-start text-xs md:text-sm">
                 <FontAwesomeIcon icon={faEnvelope} className="mr-3" />
-                info@vertexpace.com
+                info@scholarpath.com
               </p>
               <p className="flex items-start text-gray-300 justify-center md:justify-start text-xs md:text-sm">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-3 mt-1" />
@@ -152,7 +152,7 @@ const Footer: React.FC = () => {
         >
          <div className="flex flex-col justify-center items-center h-full space-y-4 md:space-y-0">
           <p className="text-xs text-white text-center">
-            Copyright © 2024 Vertexpace. All rights reserved.
+            Copyright © 2024 ScholarPath. All rights reserved.
           </p>
         </div>
 

@@ -78,10 +78,10 @@ const CareerSection: React.FC = () => {
           >
             <div className="mb-12">
               <span className="text-orange-500 font-bold text-[20px] md:text-[16px] uppercase tracking-wide">
-                About Vertexpace
+                About ScholarPath
               </span>
               <h2 className="text-3xl md:text-[40px] font-bold text-blue-900 mt-4 leading-tight">
-                Vertexpace: Your Pathway To Career Success
+              ScholarPath: Your Pathway To Career Success
               </h2>
               <div className="mt-4 w-24 h-1 bg-blue-900 "></div>
             </div>
@@ -99,7 +99,7 @@ const CareerSection: React.FC = () => {
                     Career Compass
                   </h3>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                    Feeling lost? Vertexpace guides you to the right career with
+                    Feeling lost? ScholarPath guides you to the right career with
                     expert counseling.
                   </p>
                 </div>

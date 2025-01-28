@@ -44,7 +44,7 @@ const WhyChooseSection: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Why Choose Vertexpace?
+            Why Choose ScholarPath?
           </motion.h2>
           <div className="mt-4 mb-3 w-24 h-1 bg-white mx-auto"></div>
 
@@ -55,7 +55,7 @@ const WhyChooseSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Vertexpace is dedicated to empowering students and their families, turning the often-complicated admission process into a manageable and rewarding experience. With us by your side, achieving admission to your dream school, college, or university becomes smoother and more attainable.
+            ScholarPath is dedicated to empowering students and their families, turning the often-complicated admission process into a manageable and rewarding experience. With us by your side, achieving admission to your dream school, college, or university becomes smoother and more attainable.
           </motion.p>
 
           {/* Desktop Features */}

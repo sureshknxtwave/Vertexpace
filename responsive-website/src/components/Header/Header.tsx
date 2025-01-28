@@ -86,7 +86,7 @@ const Header: React.FC = () => {
             </a>
             <span className="divider">|</span>
             <a href="mailto:info@vertexspace.com" className="flex items-center hover:text-gray-200">
-              <span>info@vertexspace.com</span>
+              <span>info@scholarpath.com</span>
             </a>
           </div>
 
@@ -112,9 +112,9 @@ const Header: React.FC = () => {
               <div className="flex items-center w-1/4">
                 <Link to="/">
                   <img
-                    src={require('../../utils/logo.png')}
+                    src={require('../../utils/logo2.png')}
                     alt="Vertexspace Logo"
-                    className="h-90px md:h-[105px]"
+                    className="h-90px md:h-[130px]"
                   />
                 </Link>
               </div>
