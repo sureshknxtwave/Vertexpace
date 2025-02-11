@@ -70,6 +70,24 @@ const Header: React.FC = () => {
   
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
+
+  const [scrollPosition, setScrollPosition] = useState(30);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsVisible(currentScrollY < lastScrollY || currentScrollY < 50); // Show when scrolling up or near top
+      setScrollPosition(currentScrollY > 50 ? 0 : 30); // Adjust top position
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   
 
   const handleJoinUsClick = () => {
@@ -137,7 +155,12 @@ const Header: React.FC = () => {
 
       {/* Main Header */}
       <div className="bg-[#0A2357] font-bold p-2 pt-8 ">
-        <header className="bg-white shadow-sm mx-0 md:mx-20 rounded-xl ">
+        <header className={`bg-white shadow-sm mx-0 md:mx-20 rounded-xl fixed  left-0 md:w-[88%] z-50 ${
+        isVisible ? "top-0" : "-top-20"
+      }  `}  style={{ top: `${scrollPosition}px` }}>
+
+        
+          
           <div className="container mx-auto px-4">
             <nav className="flex items-center justify-between h-24 relative">
               {/* Logo */}
@@ -261,7 +284,7 @@ const Header: React.FC = () => {
 
       {/* Page Title Section */}
       {currentRoute.showTitle && (
-      <div className="bg-[#0A2357] text-white py-16">
+      <div className="bg-[#0A2357] text-white pt-36 pb-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
             <h1 className="text-4xl font-bold">{currentRoute.title}</h1>
@@ -281,7 +304,7 @@ const Header: React.FC = () => {
                   <span className="mx-2">»</span>
                 </>
               )}
-              <span>{currentRoute.title.split(' ')[0]} </span>{location.pathname.startsWith('/colleges/') && (<span className="mx-2">College</span>)}
+              <span>{currentRoute.title} </span>{location.pathname.startsWith('/colleges/') && (<span className="mx-2">College</span>)}
             </div>
           </div>
         </div>

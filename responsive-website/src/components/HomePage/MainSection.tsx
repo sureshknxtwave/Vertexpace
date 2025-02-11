@@ -32,7 +32,7 @@ const MainSection: React.FC = () => {
 
   return (
     <motion.section
-      className="min-h-[620px] md:min-h-[800px] flex items-center py-12 md:py-0"
+      className="min-h-auto md:min-h-[800px] flex items-center py-12 md:py-0"
       style={{
         backgroundColor: '#0A2357',
         backgroundImage: ` url(${require('../../utils/bannerImage.png')}),linear-gradient(rgba(10, 35, 87, 0.8), rgba(10, 35, 87, 0.8))`,
@@ -72,14 +72,14 @@ const MainSection: React.FC = () => {
 
         {/* Right Section */}
         <motion.div
-          className="relative mt-8 md:mt-0"
+          className="relative  mt-8 md:mt-0"
           variants={slideInRight}
           transition={{ duration: 1, delay: 0.4 }}
         >
           <img
             src={require('../../utils/banner.jpg')}
             alt="Graduation"
-            className="rounded-full w-56 h-56 md:w-96 md:h-96 object-cover border-4 border-white shadow-lg"
+            className="rounded-full w-56 h-56  md:w-96 md:h-96 object-cover border-4 border-white shadow-lg"
           />
           {/* Spinning Effect */}
           <div className="absolute inset-0 flex items-center justify-center">
