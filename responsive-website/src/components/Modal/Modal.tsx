@@ -4,6 +4,7 @@ import React, { FC, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { toast } from 'react-toastify';
+import emailjs from "@emailjs/browser";
 
 interface ModalProps {
   isOpen: boolean;
@@ -58,18 +59,26 @@ const Modal: FC<ModalProps> = ({ isOpen, handleClose, handleSubmit }) => {
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!validateForm()) return;
 
-    if (validateForm()) {
-      handleSubmit(formData); // Pass the form data back to the parent
-      handleClose(); // Close the modal
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      }); // Reset form data
-    }
+    emailjs
+      .send(
+        "service_cfz72df",
+        "template_q0o0fwi",
+        formData,
+        "HHJBhCCgqaBV-6xEZ"
+      )
+      .then(
+        (response) => {
+          toast.success("Message sent successfully!");
+          setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          toast.error("Failed to send message.");
+          console.log("FAILED...", error);
+        }
+      );
   };
 
   return (

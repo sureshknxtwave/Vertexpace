@@ -25,6 +25,14 @@ const colleges: ICollege[] = [
   },
   {
     id: 2,
+    name: "BMS College of Engineering",
+    location: "Bangalore",
+    imageUrl: require("../../utils/Colleges/bms.png"),
+    link: "/colleges/bms",
+    websiteUrl: "www.bmsce.in"
+  },
+  {
+    id: 3,
     name: "Dayananda Sagar College of Engineering",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/2.jpeg"),
@@ -32,7 +40,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.dsce.edu"
   },
   {
-    id: 3,
+    id: 4,
     name: "East Point College of Technology",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/3.jpeg"),
@@ -40,7 +48,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.eastpoint.ac.in"
   },
   {
-    id: 4,
+    id: 5,
     name: "BV College Of Engineering",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/4.jpeg"),
@@ -48,7 +56,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.bvce.edu"
   },
   {
-    id: 5,
+    id: 6,
     name: "CMR Institute Of Technology",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/5.jpeg"),
@@ -56,7 +64,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.cmrit.ac.in"
   },
   {
-    id: 6,
+    id: 7,
     name: "Jyothishmathi College Of Engineering",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/6.jpeg"),
@@ -64,7 +72,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.jce.ac.in"
   },
   {
-    id: 7,
+    id: 8,
     name: "Christ University",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/7.jpg"),
@@ -72,7 +80,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.christ.edu"
   },
   {
-    id: 8,
+    id: 9,
     name: "St Joseph College Of Engineering",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/8.jpeg"),
@@ -80,7 +88,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.stjoseph.edu"
   },
   {
-    id: 9,
+    id: 10,
     name: "CMR JSS",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/9.jpeg"),
@@ -88,7 +96,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.cmrjss.edu"
   },
   {
-    id: 10,
+    id: 11,
     name: "JAIN University",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/10.webp"),
@@ -96,7 +104,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.jainuniversity.ac.in"
   },
   {
-    id: 11,
+    id: 12,
     name: "Mount Carmel College Autonomous",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/11.jpeg"),
@@ -104,7 +112,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.mcc.edu"
   },
   {
-    id: 12,
+    id: 13,
     name: "Bangalore Institute Of Technology",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/12.jpeg"),
@@ -112,7 +120,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.bit.edu"
   },
   {
-    id: 13,
+    id: 14,
     name: "Reva University",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/13.jpeg"),
@@ -120,7 +128,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.reva.edu.in"
   },
   {
-    id: 14,
+    id: 15,
     name: "Presidency University",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/14.jpeg"),
@@ -128,7 +136,7 @@ const colleges: ICollege[] = [
     websiteUrl: "www.presidencyuniversity.in"
   },
   {
-    id: 15,
+    id: 16,
     name: "Nitte Meenakshi Institute Of Technology",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/15.jpeg"),
@@ -140,7 +148,6 @@ const colleges: ICollege[] = [
 const CollegesGrid: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-[120px]">
-      {/* Adjust grid spacing and add more width */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         initial={{ opacity: 0, y: 50 }}
@@ -155,9 +162,8 @@ const CollegesGrid: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', stiffness: 50, damping: 25 }}
           >
-            <Link to={college.link} className="group">
-              {/* Set max-width to the card and allow flexibility in size */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-transform duration-300 hover:transform hover:scale-105 max-w-md mx-auto">
+            <Link to={`/colleges/${college.name.toLowerCase().replace(/\s+/g, '-')}`} className="group">
+              <div className="bg-white pb-4 rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-transform duration-300 hover:transform hover:scale-105 max-w-md mx-auto">
                 <div className="relative h-48 overflow-hidden bg-gray-200">
                   {college.imageUrl ? (
                     <img
@@ -170,30 +176,26 @@ const CollegesGrid: React.FC = () => {
                       <span className="text-gray-400 text-lg">No Image Available</span>
                     </div>
                   )}
-                  
                 </div>
                 <div className="flex-grow p-4 flex flex-col">
-                <p className="text-sm font-bold text-gray-700 mb-2">
+                  <p className="text-sm font-bold text-gray-700 mb-2">
                     {college.location}
                   </p>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                  <h3 className="text-md font-semibold text-gray-900 mb-4">
                     {college.name}
                   </h3>
-                  
-                  {college.websiteUrl && (
-                    <div className="mt-auto flex items-center">
-                      <span className="text-[#F47B2A] mr-1">→</span>
-                      <a
-                        href={`https://${college.websiteUrl}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#F47B2A] hover:text-[#E06718] text-sm font-medium"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {college.websiteUrl}
-                      </a>
-                    </div>
-                  )}
+
+                  {/* Read More Button */}
+                  <div className="text-center">
+              <Link
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                to={`/colleges/${college.name.toLowerCase().replace(/\s+/g, '-')}`} // Removed encodeURIComponent
+                className="bg-[#F47B2A] w-[100px] hover:bg-[#E06718] text-white text-xs font-medium py-2 px-2 rounded-lg text-center mt-auto"
+              >
+                Read More
+              </Link>
+            </div>
+                              
                 </div>
               </div>
             </Link>

@@ -6,6 +6,7 @@ import WhatWeDo from './pages/WhatWeDo/WhatWeDo';
 import Colleges from './pages/Colleges/Colleges';
 import Contact from './pages/Contact/Contact';
 import BottomToTop from './components/ScrollToTopButton/ScrollToTopButton'
+import CollegeDetails from './pages/Colleges/CollegeDetails';
 const App: React.FC = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route path="/colleges" element={<Colleges />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/colleges/:collegeId" element={<CollegeDetails />} />
         
       </Routes>
     </Router>

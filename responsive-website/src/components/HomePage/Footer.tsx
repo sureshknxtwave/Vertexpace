@@ -24,9 +24,9 @@ const Footer: React.FC = () => {
           {/* Logo and Description */}
           <div className="text-center md:text-left">
             <img 
-              src={require("../../utils/logo.png")}
+              src={require("../../utils/Footer/Scholarpathlogo.png")}
               alt="Logo" 
-              className="h-[60px] w-[140px] mb-6 mx-auto md:mx-0" 
+              className="h-[70px] w-[220px] mb-6 mx-auto md:mx-0" 
             />
             <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
             ScholarPath is a leading education consultancy helping students achieve their academic and career goals.

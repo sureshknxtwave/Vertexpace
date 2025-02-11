@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ToastContainer, toast } from 'react-toastify';
+import emailjs from "@emailjs/browser";
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 import '../../styles/ContactSection.css';
 
@@ -26,38 +27,50 @@ const ConBannerSection: React.FC = () => {
       toast.error('Name is required.');
       return false;
     }
-
     if (!emailRegex.test(formData.email)) {
       toast.error('Please enter a valid email address.');
       return false;
     }
-
     if (!phoneRegex.test(formData.phone)) {
       toast.error('Please enter a valid 10-digit phone number.');
       return false;
     }
-
     if (!formData.subject.trim()) {
       toast.error('Subject is required.');
       return false;
     }
-
     if (!formData.message.trim()) {
       toast.error('Message is required.');
       return false;
     }
-
     return true;
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (validateForm()) {
-      toast.success('Your message has been sent successfully!');
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); // Reset form
-    }
+    if (!validateForm()) return;
+
+    emailjs
+      .send(
+        "service_cfz72df",
+        "template_q0o0fwi",
+        formData,
+        "HHJBhCCgqaBV-6xEZ"
+      )
+      .then(
+        (response) => {
+          toast.success("Message sent successfully!");
+          setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          toast.error("Failed to send message.");
+          console.log("FAILED...", error);
+        }
+      );
   };
 
+  
   return (
     <div className="contact-section bg-[#F8F9FA] py-16">
       <div className="container mx-auto px-4">
@@ -86,7 +99,7 @@ const ConBannerSection: React.FC = () => {
         <div className="grid grid-cols-1 gap-6">
         {/* Location */}
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <div className="flex flex-col md:flex-row items-center space-x-4">
+          <div className="flex flex-col md:flex-row items-center justify-center space-x-4">
             <div className="contact-icon-wrapper">
               <div className="bg-[#F47B2A] p-4 m-1 rounded-full">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,8 +109,8 @@ const ConBannerSection: React.FC = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-[#0A2357] font-semibold mb-1">Location Address :</h3>
-              <p className="text-gray-600">4th T Block Jayanagar, Bangalore - 560041</p>
+              <h3 className="text-[#0A2357] text-center md:text-start font-semibold mb-1">Location Address :</h3>
+              <p className="text-gray-600 text-center md:text-start">4th T Block Jayanagar, Bangalore - 560041</p>
             </div>
           </div>
         </div>

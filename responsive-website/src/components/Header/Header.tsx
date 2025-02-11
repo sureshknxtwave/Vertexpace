@@ -22,7 +22,7 @@ const ROUTES_CONFIG = {
     showTitle: true,
   },
   '/contact': {
-    title: 'Contact',
+    title: 'Contact Us',
     showTitle: true,
   },
   '/join-us': {
@@ -31,10 +31,46 @@ const ROUTES_CONFIG = {
   },
 } as const;
 
+
+// Add a helper function to get the current route and title
+const getRouteConfig = (pathname: string) => {
+  // Check if it's a college detail page
+  if (pathname.startsWith('/colleges/')) {
+    // Extract the college name from the URL and format it
+    const collegePath = pathname.split('/colleges/')[1];
+    const collegeName = decodeURIComponent(collegePath)
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    
+    return {
+      title: collegeName,
+      showTitle: true,
+    };
+  }
+
+  // Return the config for other routes
+  return ROUTES_CONFIG[pathname as keyof typeof ROUTES_CONFIG] || {
+    title: '404',
+    showTitle: true,
+  };
+};
+
+// In your component where you render the title section:
+
+  
+
+
+
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const location = useLocation();
+  const currentRoute = getRouteConfig(location.pathname);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  
 
   const handleJoinUsClick = () => {
     setIsModalOpen(true); // Open modal when button is clicked
@@ -50,11 +86,7 @@ const Header: React.FC = () => {
     handleCloseModal(); // Close the modal after submission
   };
 
-  const currentRoute = ROUTES_CONFIG[location.pathname as keyof typeof ROUTES_CONFIG] || {
-    title: '404',
-    showTitle: true,
-  };
-
+  
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -72,9 +104,9 @@ const Header: React.FC = () => {
   }, [location]);
 
   return (
-    <div className="relative">
+    <div className="relative ">
       {/* Top Bar */}
-      <div className="bg-[#0A2357] py-3 font-bold hidden md:block">
+      {/* <div className="bg-[#0A2357] py-3 font-bold hidden md:block">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex items-center text-white text-sm">
             <a href="tel:+919620201058" className="flex items-center hover:text-gray-200">
@@ -101,11 +133,11 @@ const Header: React.FC = () => {
            
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Header */}
-      <div className="bg-[#0A2357] font-bold p-2">
-        <header className="bg-white shadow-sm mx-0 md:mx-20 rounded-xl">
+      <div className="bg-[#0A2357] font-bold p-2 pt-8 ">
+        <header className="bg-white shadow-sm mx-0 md:mx-20 rounded-xl ">
           <div className="container mx-auto px-4">
             <nav className="flex items-center justify-between h-24 relative">
               {/* Logo */}
@@ -229,21 +261,32 @@ const Header: React.FC = () => {
 
       {/* Page Title Section */}
       {currentRoute.showTitle && (
-        <div className="bg-[#0A2357] text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-              <h1 className="text-4xl font-bold">{currentRoute.title}</h1>
-              <div className="flex items-center">
-                <Link to="/" className="text-white hover:text-gray-200 transition-colors duration-200">
-                  Home
-                </Link>
-                <span className="mx-2">»</span>
-                <span>{currentRoute.title}</span>
-              </div>
+      <div className="bg-[#0A2357] text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+            <h1 className="text-4xl font-bold">{currentRoute.title}</h1>
+            <div className="flex items-center">
+              <Link to="/" className="text-white hover:text-gray-200 transition-colors duration-200">
+                Home
+              </Link>
+              <span className="mx-2">»</span>
+              {location.pathname.startsWith('/colleges/') && (
+                <>
+                  <Link 
+                    to="/colleges" 
+                    className="text-white hover:text-gray-200 transition-colors duration-200"
+                  >
+                    Colleges
+                  </Link>
+                  <span className="mx-2">»</span>
+                </>
+              )}
+              <span>{currentRoute.title.split(' ')[0]} </span>{location.pathname.startsWith('/colleges/') && (<span className="mx-2">College</span>)}
             </div>
           </div>
         </div>
-      )}
+      </div>
+    )}
     </div>
   );
 };

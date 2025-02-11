@@ -52,6 +52,13 @@ const ServicesSection: React.FC = () => {
             { title: 'Admission Guidance', icon: '📚', description: 'Get help with admission processes and forms.' },
             { title: 'Application And Documentation', icon: '📝', description: 'Guidance on completing applications and paperwork.' },
             { title: 'Secured Admission', icon: '🎓', description: 'Ensuring admissions in top universities.' }].map((service, index) => (
+              <Link
+                to={`/what-we-do#${service.title.replace(/\s+/g, '-').toLowerCase()}`}
+                onClick={() => setTimeout(() => {
+                  const element = document.getElementById(service.title.replace(/\s+/g, '-').toLowerCase());
+                  element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100)} // Small delay to allow React Router to update
+              >
             <motion.div
               key={index}
               className="card"
@@ -74,6 +81,7 @@ const ServicesSection: React.FC = () => {
                 </div>
               </div>
             </motion.div>
+            </Link>
           ))}
         </div>
       </div>
