@@ -155,7 +155,7 @@ const Header: React.FC = () => {
 
       {/* Main Header */}
       <div className="bg-[#0A2357] font-bold p-2 pt-8 ">
-        <header className={`bg-white shadow-sm mx-0 md:mx-20 rounded-xl fixed  left-0 md:w-[88%] z-50 ${
+        <header className={`bg-white shadow-sm mx-0 md:mx-20 rounded-xl fixed  left-0  w-[99vw] md:w-[88%] z-50 ${
         isVisible ? "top-0" : "-top-20"
       }  `}  style={{ top: `${scrollPosition}px` }}>
 
