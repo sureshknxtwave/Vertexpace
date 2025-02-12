@@ -48,7 +48,7 @@ const MainSection: React.FC = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-12 text-white font-bold">
         {/* Left Section */}
         <motion.div
-          className="flex order-2 md:order-1 flex-col text-center md:text-left max-w-xl"
+          className="flex order-2 md:-order-none flex-col text-center md:text-left max-w-xl"
           variants={slideInLeft}
           transition={{ duration: 1, delay: 0.2 }}
         >
@@ -79,7 +79,7 @@ const MainSection: React.FC = () => {
           <img
             src={require('../../utils/banner.jpg')}
             alt="Graduation"
-            className="order-1  md:order-2 rounded-full w-56 h-56  md:w-96 md:h-96 object-cover border-4 border-white shadow-lg"
+            className="order-1  md:-order-none rounded-full w-56 h-56  md:w-96 md:h-96 object-cover border-4 border-white shadow-lg"
           />
           {/* Spinning Effect */}
           <div className="absolute inset-0 flex items-center justify-center">
