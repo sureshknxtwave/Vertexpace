@@ -206,10 +206,11 @@ const Header: React.FC = () => {
 
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center justify-center w-2/4">
-                <div className="flex space-x-8">
+                <div  className="flex space-x-8">
                   {Object.entries(ROUTES_CONFIG).map(([path, { title }]) => (
                     path !== '/join-us' && (
                       <Link
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         key={path}
                         to={path}
                         className={`nav-links text-gray-700 hover:text-orange-500 transition-colors duration-200 relative ${
@@ -252,6 +253,7 @@ const Header: React.FC = () => {
                 {Object.entries(ROUTES_CONFIG).map(([path, { title }]) => (
                   path !== '/join-us' && (
                     <Link
+                    
                       key={path}
                       to={path}
                       className={`block text-center py-2 transition-colors duration-200 ${
@@ -259,8 +261,12 @@ const Header: React.FC = () => {
                           ? 'text-orange-500 font-bold'
                           : 'text-gray-700 hover:text-orange-500'
                       }`}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
                     >
+                    
                       {title.toUpperCase()}
                     </Link>
                   )
@@ -296,6 +302,7 @@ const Header: React.FC = () => {
               {location.pathname.startsWith('/colleges/') && (
                 <>
                   <Link 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     to="/colleges" 
                     className="text-white hover:text-gray-200 transition-colors duration-200"
                   >
