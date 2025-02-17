@@ -2127,7 +2127,7 @@ export const colleges: College[] = [
   // },
   {
     "id": 13,
-    "name": "St Joseph College Of Commerce",
+    "name": "St Joseph's College of Commerce",
     "location": "Bengaluru, Karnataka",
     "imageUrl": require("../../utils/Colleges/8.jpeg"),
     "description": "Established in 1882, St. Joseph's University is a Jesuit institution located in the heart of Bengaluru. It offers a wide range of undergraduate and postgraduate programs across various disciplines.",

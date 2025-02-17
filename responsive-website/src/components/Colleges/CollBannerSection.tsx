@@ -67,7 +67,7 @@ const colleges: ICollege[] = [
   },
   {
     id: 9,
-    name: "St Joseph College Of Commerce",
+    name: "St Joseph's College of Commerce",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/8.jpeg"),
     link: "/colleges/stjoseph",
