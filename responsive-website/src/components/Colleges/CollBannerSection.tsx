@@ -17,7 +17,7 @@ interface ICollege {
 const colleges: ICollege[] = [
   {
     id: 1,
-    name: "Ramaiyah Institute Of Technology",
+    name: "MS Ramaiyah Institute Of Technology",
     location: "Bangalore",
     imageUrl: require("../../utils/Colleges/1.png"),
     link: "/colleges/msrit",
