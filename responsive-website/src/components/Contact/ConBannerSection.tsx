@@ -98,7 +98,7 @@ const ConBannerSection: React.FC = () => {
             {/* Contact Details */}
         <div className="grid grid-cols-1 gap-6">
         {/* Location */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        {/* <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex flex-col md:flex-row items-center justify-center space-x-4">
             <div className="contact-icon-wrapper">
               <div className="bg-[#F47B2A] p-4 m-1 rounded-full">
@@ -113,7 +113,7 @@ const ConBannerSection: React.FC = () => {
               <p className="text-gray-600 text-center md:text-start">4th T Block Jayanagar, Bangalore - 560041</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
   {/* Phone */}
@@ -175,7 +175,7 @@ const ConBannerSection: React.FC = () => {
       </div>
       <div>
         <h3 className="text-[#0A2357] text-center font-semibold mb-1">Email Address :</h3>
-        <p className="text-gray-600 text-center">info@vertexspace.com</p>
+        <p className="text-gray-600 text-center"> info@scholarpath.com</p>
       </div>
     </div>
   </motion.div>

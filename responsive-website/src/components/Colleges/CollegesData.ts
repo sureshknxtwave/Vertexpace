@@ -1799,7 +1799,7 @@ export const colleges: College[] = [
 
   {
     "id": 9,
-    "name": "Ramaiyah Institute Of Technology",
+    "name": "MS Ramaiyah Institute Of Technology",
     "location": "Bangalore",
     "imageUrl": require("../../utils/Colleges/1.png"),
     "description": "Established in 1962, Ramaiah Institute of Technology (RIT), formerly known as M.S. Ramaiah Institute of Technology, is one of the top private engineering colleges in India. The institute is affiliated with Visvesvaraya Technological University (VTU) and offers undergraduate, postgraduate, and doctoral programs in various engineering and technology disciplines.",
@@ -1978,156 +1978,156 @@ export const colleges: College[] = [
     }
   },
 
-  {
-    "id": 11,
-    "name": "BV College Of Engineering",
-    "location": "Navi Mumbai, Maharashtra",
-    "imageUrl": require("../../utils/Colleges/4.jpeg"),
-    "description": "Established in 1990, Bharati Vidyapeeth College of Engineering, Navi Mumbai, is permanently affiliated with the University of Mumbai and approved by the AICTE. The college offers undergraduate and postgraduate programs in various engineering disciplines.",
-    "schools": [
-      {
-        "name": "Undergraduate Programs",
-        "description": "The Bachelor of Engineering (BE) programs are designed to provide students with a solid foundation in engineering principles and practices.",
-        "programs": {
-          "undergraduate": [
-            { "name": "Computer Engineering", "degree": "BE", "duration": "4 years" },
-            { "name": "Electronics and Telecommunication Engineering", "degree": "BE", "duration": "4 years" },
-            { "name": "Mechanical Engineering", "degree": "BE", "duration": "4 years" },
-            { "name": "Instrumentation Engineering", "degree": "BE", "duration": "4 years" },
-            { "name": "Information Technology", "degree": "BE", "duration": "4 years" },
-            { "name": "Civil Engineering", "degree": "BE", "duration": "4 years" }
-          ]
-        }
-      },
-      {
-        "name": "Postgraduate Programs",
-        "description": "The Master of Engineering (ME) programs aim to provide advanced knowledge and research opportunities in specialized engineering fields.",
-        "programs": {
-          "postgraduate": [
-            { "name": "Computer Engineering", "degree": "ME", "duration": "2 years" },
-            { "name": "Mechanical Engineering", "degree": "ME", "duration": "2 years" }
-          ]
-        }
-      }
-    ],
-    "highlights": {
-      "established": 1990,
-      "ranking": "NAAC Accredited",
-      "campus": "CBD Belapur, Sector-7, Navi Mumbai, Maharashtra, India - 400614",
-      "placement": "Active placement cell with collaborations with leading companies.",
-      "facilities": [
-        "Central Library",
-        "Research Centers",
-        "Innovation Hub",
-        "Sports Complex",
-        "Hostel Accommodation"
-      ]
-    },
-    "admissionProcess": {
-      "entranceExams": ["MHT-CET", "JEE Main"],
-      "applicationPeriod": "March - July",
-      "requiredDocuments": [
-        "10th Mark Sheet",
-        "12th Mark Sheet",
-        "Entrance Exam Score Card",
-        "Domicile Certificate",
-        "Category Certificate (if applicable)"
-      ]
-    },
-    "contact": {
-      "address": "CBD Belapur, Sector-7, Navi Mumbai, Maharashtra, India - 400614",
-      "phone": "+91-22-27572140, +91-22-27571074",
-      "email": "principal.bvcoenm@bharatividyapeeth.edu",
-      "website": "https://bvcoenm.edu.in/"
-    }
-  },
+  // {
+  //   "id": 11,
+  //   "name": "BV College Of Engineering",
+  //   "location": "Navi Mumbai, Maharashtra",
+  //   "imageUrl": require("../../utils/Colleges/4.jpeg"),
+  //   "description": "Established in 1990, Bharati Vidyapeeth College of Engineering, Navi Mumbai, is permanently affiliated with the University of Mumbai and approved by the AICTE. The college offers undergraduate and postgraduate programs in various engineering disciplines.",
+  //   "schools": [
+  //     {
+  //       "name": "Undergraduate Programs",
+  //       "description": "The Bachelor of Engineering (BE) programs are designed to provide students with a solid foundation in engineering principles and practices.",
+  //       "programs": {
+  //         "undergraduate": [
+  //           { "name": "Computer Engineering", "degree": "BE", "duration": "4 years" },
+  //           { "name": "Electronics and Telecommunication Engineering", "degree": "BE", "duration": "4 years" },
+  //           { "name": "Mechanical Engineering", "degree": "BE", "duration": "4 years" },
+  //           { "name": "Instrumentation Engineering", "degree": "BE", "duration": "4 years" },
+  //           { "name": "Information Technology", "degree": "BE", "duration": "4 years" },
+  //           { "name": "Civil Engineering", "degree": "BE", "duration": "4 years" }
+  //         ]
+  //       }
+  //     },
+  //     {
+  //       "name": "Postgraduate Programs",
+  //       "description": "The Master of Engineering (ME) programs aim to provide advanced knowledge and research opportunities in specialized engineering fields.",
+  //       "programs": {
+  //         "postgraduate": [
+  //           { "name": "Computer Engineering", "degree": "ME", "duration": "2 years" },
+  //           { "name": "Mechanical Engineering", "degree": "ME", "duration": "2 years" }
+  //         ]
+  //       }
+  //     }
+  //   ],
+  //   "highlights": {
+  //     "established": 1990,
+  //     "ranking": "NAAC Accredited",
+  //     "campus": "CBD Belapur, Sector-7, Navi Mumbai, Maharashtra, India - 400614",
+  //     "placement": "Active placement cell with collaborations with leading companies.",
+  //     "facilities": [
+  //       "Central Library",
+  //       "Research Centers",
+  //       "Innovation Hub",
+  //       "Sports Complex",
+  //       "Hostel Accommodation"
+  //     ]
+  //   },
+  //   "admissionProcess": {
+  //     "entranceExams": ["MHT-CET", "JEE Main"],
+  //     "applicationPeriod": "March - July",
+  //     "requiredDocuments": [
+  //       "10th Mark Sheet",
+  //       "12th Mark Sheet",
+  //       "Entrance Exam Score Card",
+  //       "Domicile Certificate",
+  //       "Category Certificate (if applicable)"
+  //     ]
+  //   },
+  //   "contact": {
+  //     "address": "CBD Belapur, Sector-7, Navi Mumbai, Maharashtra, India - 400614",
+  //     "phone": "+91-22-27572140, +91-22-27571074",
+  //     "email": "principal.bvcoenm@bharatividyapeeth.edu",
+  //     "website": "https://bvcoenm.edu.in/"
+  //   }
+  // },
 
-  {
-    "id": 12,
-    "name": "Jyothishmathi College Of Engineering",
-    "location": "Karimnagar, Telangana",
-    "imageUrl": require("../../utils/Colleges/6.jpeg"),
-    "description": "Established in 1997, Jyothishmathi Institute of Technology and Science (JITS) is an autonomous institution accredited with NAAC 'A' Grade and NBA. Affiliated with Jawaharlal Nehru Technological University, Hyderabad (JNTUH), and approved by AICTE, JITS offers undergraduate and postgraduate programs in various engineering disciplines.",
-    "schools": [
-      {
-        "name": "Undergraduate Programs",
-        "description": "The Bachelor of Technology (B.Tech) programs are designed to provide students with a solid foundation in engineering principles and practices.",
-        "programs": {
-          "undergraduate": [
-            { "name": "Artificial Intelligence and Machine Learning", "degree": "B.Tech", "duration": "4 years" },
-            { "name": "Electronics and Communications Engineering", "degree": "B.Tech", "duration": "4 years" },
-            { "name": "Computer Science & Engineering", "degree": "B.Tech", "duration": "4 years" },
-            { "name": "Electrical and Electronics Engineering", "degree": "B.Tech", "duration": "4 years" },
-            { "name": "Civil Engineering", "degree": "B.Tech", "duration": "4 years" },
-            { "name": "Mechanical Engineering", "degree": "B.Tech", "duration": "4 years" }
-          ]
-        }
-      },
-      {
-        "name": "Postgraduate Programs",
-        "description": "The Master of Technology (M.Tech) programs aim to provide advanced knowledge and research opportunities in specialized engineering fields.",
-        "programs": {
-          "postgraduate": [
-            { "name": "Computer Science & Engineering", "degree": "M.Tech", "duration": "2 years" },
-            { "name": "VLSI System Design", "degree": "M.Tech", "duration": "2 years" }
-          ]
-        }
-      },
-      {
-        "name": "Diploma Programs",
-        "description": "Diploma courses designed to provide foundational knowledge and practical skills in specific engineering disciplines.",
-        "programs": {
-          "diploma": [
-            { "name": "Computer Engineering", "degree": "Diploma", "duration": "3 years" },
-            { "name": "Electronics and Communications Engineering", "degree": "Diploma", "duration": "3 years" },
-            { "name": "Electrical and Electronics Engineering", "degree": "Diploma", "duration": "3 years" }
-          ]
-        }
-      },
-      {
-        "name": "Management Programs",
-        "description": "The Master of Business Administration (MBA) program is designed to equip students with managerial skills and business acumen.",
-        "programs": {
-          "postgraduate": [
-            { "name": "Master of Business Administration", "degree": "MBA", "duration": "2 years" }
-          ]
-        }
-      }
-    ],
-    "highlights": {
-      "established": 1997,
-      "ranking": "NAAC Accredited with 'A' Grade",
-      "campus": "JITS Rd, Ramakrishna Colony, Karimnagar, Telangana 505527",
-      "placement": "Active placement cell with collaborations with leading companies.",
-      "facilities": [
-        "Central Library",
-        "Research Centers",
-        "Innovation Hub",
-        "Sports Complex",
-        "Hostel Accommodation"
-      ]
-    },
-    "admissionProcess": {
-      "entranceExams": ["TS EAMCET", "GATE", "ICET"],
-      "applicationPeriod": "March - July",
-      "requiredDocuments": [
-        "10th Mark Sheet",
-        "12th Mark Sheet",
-        "Entrance Exam Score Card",
-        "Domicile Certificate",
-        "Category Certificate (if applicable)"
-      ]
-    },
-    "contact": {
-      "address": "JITS Rd, Ramakrishna Colony, Karimnagar, Telangana 505527",
-      "phone": "+91-878-222-4444",
-      "email": "info@jits.ac.in",
-      "website": "https://jits.ac.in/"
-    }
-  },
+  // {
+  //   "id": 12,
+  //   "name": "Jyothishmathi College Of Engineering",
+  //   "location": "Karimnagar, Telangana",
+  //   "imageUrl": require("../../utils/Colleges/6.jpeg"),
+  //   "description": "Established in 1997, Jyothishmathi Institute of Technology and Science (JITS) is an autonomous institution accredited with NAAC 'A' Grade and NBA. Affiliated with Jawaharlal Nehru Technological University, Hyderabad (JNTUH), and approved by AICTE, JITS offers undergraduate and postgraduate programs in various engineering disciplines.",
+  //   "schools": [
+  //     {
+  //       "name": "Undergraduate Programs",
+  //       "description": "The Bachelor of Technology (B.Tech) programs are designed to provide students with a solid foundation in engineering principles and practices.",
+  //       "programs": {
+  //         "undergraduate": [
+  //           { "name": "Artificial Intelligence and Machine Learning", "degree": "B.Tech", "duration": "4 years" },
+  //           { "name": "Electronics and Communications Engineering", "degree": "B.Tech", "duration": "4 years" },
+  //           { "name": "Computer Science & Engineering", "degree": "B.Tech", "duration": "4 years" },
+  //           { "name": "Electrical and Electronics Engineering", "degree": "B.Tech", "duration": "4 years" },
+  //           { "name": "Civil Engineering", "degree": "B.Tech", "duration": "4 years" },
+  //           { "name": "Mechanical Engineering", "degree": "B.Tech", "duration": "4 years" }
+  //         ]
+  //       }
+  //     },
+  //     {
+  //       "name": "Postgraduate Programs",
+  //       "description": "The Master of Technology (M.Tech) programs aim to provide advanced knowledge and research opportunities in specialized engineering fields.",
+  //       "programs": {
+  //         "postgraduate": [
+  //           { "name": "Computer Science & Engineering", "degree": "M.Tech", "duration": "2 years" },
+  //           { "name": "VLSI System Design", "degree": "M.Tech", "duration": "2 years" }
+  //         ]
+  //       }
+  //     },
+  //     {
+  //       "name": "Diploma Programs",
+  //       "description": "Diploma courses designed to provide foundational knowledge and practical skills in specific engineering disciplines.",
+  //       "programs": {
+  //         "diploma": [
+  //           { "name": "Computer Engineering", "degree": "Diploma", "duration": "3 years" },
+  //           { "name": "Electronics and Communications Engineering", "degree": "Diploma", "duration": "3 years" },
+  //           { "name": "Electrical and Electronics Engineering", "degree": "Diploma", "duration": "3 years" }
+  //         ]
+  //       }
+  //     },
+  //     {
+  //       "name": "Management Programs",
+  //       "description": "The Master of Business Administration (MBA) program is designed to equip students with managerial skills and business acumen.",
+  //       "programs": {
+  //         "postgraduate": [
+  //           { "name": "Master of Business Administration", "degree": "MBA", "duration": "2 years" }
+  //         ]
+  //       }
+  //     }
+  //   ],
+  //   "highlights": {
+  //     "established": 1997,
+  //     "ranking": "NAAC Accredited with 'A' Grade",
+  //     "campus": "JITS Rd, Ramakrishna Colony, Karimnagar, Telangana 505527",
+  //     "placement": "Active placement cell with collaborations with leading companies.",
+  //     "facilities": [
+  //       "Central Library",
+  //       "Research Centers",
+  //       "Innovation Hub",
+  //       "Sports Complex",
+  //       "Hostel Accommodation"
+  //     ]
+  //   },
+  //   "admissionProcess": {
+  //     "entranceExams": ["TS EAMCET", "GATE", "ICET"],
+  //     "applicationPeriod": "March - July",
+  //     "requiredDocuments": [
+  //       "10th Mark Sheet",
+  //       "12th Mark Sheet",
+  //       "Entrance Exam Score Card",
+  //       "Domicile Certificate",
+  //       "Category Certificate (if applicable)"
+  //     ]
+  //   },
+  //   "contact": {
+  //     "address": "JITS Rd, Ramakrishna Colony, Karimnagar, Telangana 505527",
+  //     "phone": "+91-878-222-4444",
+  //     "email": "info@jits.ac.in",
+  //     "website": "https://jits.ac.in/"
+  //   }
+  // },
   {
     "id": 13,
-    "name": "St Joseph College Of Engineering",
+    "name": "St Joseph College Of Commerce",
     "location": "Bengaluru, Karnataka",
     "imageUrl": require("../../utils/Colleges/8.jpeg"),
     "description": "Established in 1882, St. Joseph's University is a Jesuit institution located in the heart of Bengaluru. It offers a wide range of undergraduate and postgraduate programs across various disciplines.",

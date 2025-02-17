@@ -22,11 +22,11 @@ const Footer: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-20"
         >
           {/* Logo and Description */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left ">
             <img 
               src={require("../../utils/Footer/Scholarpathlogo.png")}
               alt="Logo" 
-              className="h-[70px] w-[220px] mb-6 mx-auto md:mx-0" 
+              className="h-[30px]  md:h-[60px] mb-6 mx-auto md:mx-0" 
             />
             <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
             ScholarPath is a leading education consultancy helping students achieve their academic and career goals.
@@ -132,12 +132,12 @@ const Footer: React.FC = () => {
                 <FontAwesomeIcon icon={faEnvelope} className="mr-3" />
                 info@scholarpath.com
               </p>
-              <p className="flex items-start text-gray-300 justify-center md:justify-start text-xs md:text-sm">
+              {/* <p className="flex items-start text-gray-300 justify-center md:justify-start text-xs md:text-sm">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-3 mt-1" />
                 <span>
                   No. 38/2 2nd Floor, 18th Main, 9th Block, Jayanagar, Bangalore, Karnataka-560041
                 </span>
-              </p>
+              </p> */}
             </div>
           </motion.div>
         </motion.div>
