@@ -47,14 +47,7 @@ const colleges: ICollege[] = [
     link: "/colleges/east-point",
     websiteUrl: "www.eastpoint.ac.in"
   },
-  {
-    id: 5,
-    name: "BV College Of Engineering",
-    location: "Bangalore",
-    imageUrl: require("../../utils/Colleges/4.jpeg"),
-    link: "/colleges/bv",
-    websiteUrl: "www.bvce.edu"
-  },
+  
   {
     id: 6,
     name: "CMR Institute Of Technology",
@@ -63,14 +56,7 @@ const colleges: ICollege[] = [
     link: "/colleges/cmr",
     websiteUrl: "www.cmrit.ac.in"
   },
-  {
-    id: 7,
-    name: "Jyothishmathi College Of Engineering",
-    location: "Bangalore",
-    imageUrl: require("../../utils/Colleges/6.jpeg"),
-    link: "/colleges/jce",
-    websiteUrl: "www.jce.ac.in"
-  },
+  
   {
     id: 8,
     name: "Christ University",
